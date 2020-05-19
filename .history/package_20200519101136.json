@@ -19,6 +19,7 @@
     "dev": "concurrently \"npm start\" \"npm run json-server\"",
     "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
     "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css"
+  
   },
   "eslintConfig": {
     "extends": "react-app"
