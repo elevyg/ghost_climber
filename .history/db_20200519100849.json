@@ -1,0 +1,56 @@
+{
+  "zonas": [
+    {
+      "id": 1,
+      "comuna": "Llayllay",
+      "region": "Valparaiso",
+      "sector": [
+        {
+          "id": 1,
+          "nombre": "Las Chilcas",
+          "subsector": [
+            { "id": 1, "nombre": "El Cubo", "n_vias": 27 },
+            { "id": 2, "nombre": "El Espino", "n_vias": 11 },
+            { "id": 3, "nombre": "Circulo", "n_vias": 9 },
+            { "id": 4, "nombre": "Transilvania", "n_vias": 7 },
+            { "id": 5, "nombre": "Plan Z", "n_vias": 5 },
+            { "id": 6, "nombre": "Diabólica", "n_vias": 7 }
+          ]
+        }
+      ],
+      "enCuarentena": false
+    },
+    {
+      "id": 2,
+      "comuna": "San José de Maipo",
+      "region": "Metropolitana",
+      "enCuarentena": true,
+      "sector": [
+        {
+          "id": 1,
+          "nombre": "Las Palestras",
+          "subsector": [
+            { "id": 1, "nombre": "Todo por Nada", "n_vias": 10 },
+            { "id": 2, "nombre": "Hidrofobia", "n_vias": 9 },
+            { "id": 3, "nombre": "Popeye", "n_vias": 4 },
+            { "id": 4, "nombre": "La Fogata", "n_vias": 13 },
+            { "id": 5, "nombre": "Constelaciones", "n_vias": 15 }
+          ]
+        },
+        {
+          "id": 2,
+          "nombre": "Los Manyos",
+          "subsector": [
+            { "id": 1, "nombre": "Anfiteatro", "n_vias": 11 },
+            { "id": 2, "nombre": "Anfiteatro Chico", "n_vias": 3 },
+            { "id": 3, "nombre": "Escuela", "n_vias": 3 },
+            { "id": 4, "nombre": "Persigüigüi y Jurelman", "n_vias": 10 },
+            { "id": 5, "nombre": "Pared Los Manyos", "n_vias": 8 },
+            { "id": 6, "nombre": "La Vecindad", "n_vias": 7 }
+          ]
+        }
+      ]
+    }
+  ],
+  "visitas": []
+}

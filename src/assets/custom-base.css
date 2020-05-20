@@ -1,0 +1,8 @@
+select {
+  @apply block;
+  @apply appearance-none;
+}
+
+h1 {
+  @apply text-red-400;
+}

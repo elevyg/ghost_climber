@@ -1,0 +1,4 @@
+select {
+  @apply block;
+  @apply appearance-none;
+}

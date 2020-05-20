@@ -19,7 +19,7 @@
     "json-server": "json-server --watch db.json --port 5000",
     "dev": "concurrently \"npm start\" \"npm run json-server\"",
     "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
-    "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css"
+    "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css "
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -37,6 +37,7 @@
     ]
   },
   "devDependencies": {
+    "@tailwindcss/custom-forms": "^0.2.1",
     "autoprefixer": "^9.8.0",
     "concurrently": "^5.2.0",
     "json-server": "^0.16.1",
