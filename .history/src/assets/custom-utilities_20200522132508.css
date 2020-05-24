@@ -1,0 +1,7 @@
+.btn {
+  @apply bg-blue-300;
+}
+
+#ghostBtn:checked > div {
+  background: #2b6cb0;
+}

@@ -1,0 +1,74 @@
+{
+  "zonas": [
+    {
+      "id": "e79e5832-4c86-4826-863f-654e99609834",
+      "comuna": "Llayllay",
+      "region": "Valparaiso",
+      "sector": [
+        {
+          "id": "59789c80-059c-46b7-b2e6-c0fae5aed5b8",
+          "nombre": "Las Chilcas",
+          "subsector": [
+            { "id": "a1", "nombre": "El Cubo", "n_vias": 27 },
+            { "id": "a2", "nombre": "El Espino", "n_vias": 11 },
+            { "id": "a3", "nombre": "Circulo", "n_vias": 9 },
+            { "id": "a4", "nombre": "Transilvania", "n_vias": 7 },
+            { "id": "a5", "nombre": "Plan Z", "n_vias": 5 },
+            { "id": "a6", "nombre": "Diabólica", "n_vias": 7 }
+          ]
+        }
+      ],
+      "enCuarentena": false
+    },
+    {
+      "id": "930454ed-981f-4064-aa66-ec32e8508fb1",
+      "comuna": "San José de Maipo",
+      "region": "Metropolitana",
+      "enCuarentena": true,
+      "sector": [
+        {
+          "id": "b8b7fdba-8596-4420-b659-d55cdf9423bc",
+          "nombre": "Las Palestras",
+          "subsector": [
+            { "id": "b1", "nombre": "Todo por Nada", "n_vias": 10 },
+            { "id": "b2", "nombre": "Hidrofobia", "n_vias": 9 },
+            { "id": "b3", "nombre": "Popeye", "n_vias": 4 },
+            { "id": "b4", "nombre": "La Fogata", "n_vias": 13 },
+            { "id": "b5", "nombre": "Constelaciones", "n_vias": 15 }
+          ]
+        },
+        {
+          "id": "89ae12e2-92b7-4598-8cb4-166f714c83f8",
+          "nombre": "Los Manyos",
+          "subsector": [
+            { "id": 1, "nombre": "Anfiteatro", "n_vias": 11 },
+            { "id": 2, "nombre": "Anfiteatro Chico", "n_vias": 3 },
+            { "id": 3, "nombre": "Escuela", "n_vias": 3 },
+            { "id": 4, "nombre": "Persigüigüi y Jurelman", "n_vias": 10 },
+            { "id": 5, "nombre": "Pared Los Manyos", "n_vias": 8 },
+            { "id": 6, "nombre": "La Vecindad", "n_vias": 7 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eeff6897-b4b4-4f66-98e5-f807969b508f",
+      "comuna": "Chacabuco",
+      "region": "Metropolitana",
+      "enCuarentena": true,
+      "sector": [
+        {
+          "id": "f66d6e30-99d1-4963-8a88-9057c980fbea",
+          "nombre": "Chacabuco",
+          "subsector": [
+            { "id": 1, "nombre": "Porno", "n_vias": 9 },
+            { "id": 2, "nombre": "Piola", "n_vias": 13 },
+            { "id": 3, "nombre": "Marmol", "n_vias": 14 },
+            { "id": 4, "nombre": "Multilargos", "n_vias": 13 }
+          ]
+        }
+      ]
+    }
+  ],
+  "visitas": []
+}

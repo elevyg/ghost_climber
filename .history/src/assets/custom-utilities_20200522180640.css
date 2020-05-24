@@ -1,0 +1,7 @@
+.btn {
+  @apply bg-blue-300;
+}
+
+#wrapper .ghostToggler:checked + #ghostBtn > div {
+  @apply bg-blue-700;
+}

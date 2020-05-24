@@ -5,7 +5,7 @@ import ZonasState from './context/zonas/ZonasState';
 function App() {
   return (
     <div className='App'>
-      <ZonasState>
+      <ZonasState> 
         <Fragment>
           <Home />
         </Fragment>

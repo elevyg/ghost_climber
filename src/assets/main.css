@@ -578,7 +578,7 @@ video {
   height: auto;
 }
 
-@import './custom-base.css';
+/* @import './custom-base.css'; */
 
 .container {
   width: 100%;
@@ -819,6 +819,12 @@ video {
   outline: none;
   box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
   border-color: #63b3ed;
+}
+
+.btn {
+  --bg-opacity: 1;
+  background-color: #90cdf4;
+  background-color: rgba(144, 205, 244, var(--bg-opacity));
 }
 
 .space-y-0 > :not(template) ~ :not(template) {
@@ -14556,6 +14562,30 @@ video {
 
 .delay-1000 {
   transition-delay: 1000ms;
+}
+
+#ghostBtn {
+  transition: all 1s ease 0.5s;
+}
+
+#wrapper .ghostToggler:checked + #ghostBtn > div {
+  background: #63b3ed;
+  color: #fff;
+}
+
+#wrapper .ghostToggler:checked + #ghostBtn2 > div {
+  background: #63b3ed;
+  color: #fff;
+}
+
+#wrapper .ghostToggler:checked + #ghostBtn {
+  background: #63b3ed;
+  transform: translateY(-100px);
+  opacity: 0;
+}
+
+#wrapper .ghostToggler:checked + #ghostBtn > div > i {
+  color: #fff;
 }
 
 @media (min-width: 640px) {

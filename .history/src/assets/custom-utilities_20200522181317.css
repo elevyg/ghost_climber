@@ -1,0 +1,17 @@
+.btn {
+  @apply bg-blue-300;
+}
+
+#ghostBtn {
+  transition: all1s ease-out 0.2s;
+}
+
+#wrapper .ghostToggler:checked + #ghostBtn > div {
+  background: #63b3ed;
+  color: #fff;
+  transform: translateY(-10px);
+}
+
+#wrapper .ghostToggler:checked + #ghostBtn > div > i {
+  color: #fff;
+}

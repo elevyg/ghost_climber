@@ -1,0 +1,8 @@
+.btn {
+  @apply bg-blue-300;
+}
+
+#ghostBtn:checked::before {
+  background: #2b6cb0;
+  opacity: 10%;
+}

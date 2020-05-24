@@ -1,0 +1,11 @@
+.btn {
+  @apply bg-blue-300;
+}
+
+#ghostBtn:checked ~ #ghostBtnBg {
+  background: #2b6cb0;
+}
+
+#ghoatBtnBg {
+  background-color: #333;
+}

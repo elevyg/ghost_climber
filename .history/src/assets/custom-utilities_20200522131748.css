@@ -1,0 +1,6 @@
+.btn {
+  @apply bg-blue-300;
+}
+
+#ghostBtn:checked ~ #ghostBtnBg {
+}
