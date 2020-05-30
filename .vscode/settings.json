@@ -1,5 +1,21 @@
 {
   "cSpell.words": [
     "zonas"
-  ]
+  ],
+  "files.exclude": {
+    "client/node_modules": true,
+    "client/tailwind.js": true,
+    "node_modules": true,
+    ".gitignore": true,
+    "config": true,
+    "client/package-lock.json": true,
+    "package-lock.json": true,
+    "package.json": true,
+    "client/package.json": true,
+    "client/postcss.config.js": true,
+    "client/public": true,
+    ".vscode": true,
+    ".history": true
+  },
+  "workspace.isHidden": true
 }
