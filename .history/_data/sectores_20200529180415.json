@@ -1,0 +1,20 @@
+[
+  {
+    "nombre": "Los Manyos",
+    "comuna": "San José de Maipo",
+    "region": "Metropolitana",
+    "pais": "Chile"
+  },
+  {
+    "nombre": "Las Palestras",
+    "comuna": "San José de Maipo",
+    "region": "Metropolitana",
+    "pais": "Chile"
+  },
+  {
+    "nombre": "Chacabuco",
+    "comuna": "Colina",
+    "region": "Metropolitana",
+    "pais": "Chile"
+  }
+]
