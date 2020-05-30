@@ -1,21 +1,23 @@
 const ErrorResponse = require('../utils/errorResponse');
 const asyncHandler = require('../middleware/async');
+const Contador = require('../models/Contador');
 const Subsector = require('../models/Subsector');
-const Sector = require('../models/Sector');
 
-// @desc:     Obtener subsectores
-// @route     GET /api/v1/subsectores
-// @route     GET /api/v1/sectores/:sectorId/subsectores
+// @desc:     Obtener contador
+// @route     GET /api/v1/contador
+// @route     GET /api/v1/subsectores/:subsectorId/contador
 // @access:   Public
-exports.getSubsectores = asyncHandler(async (req, res, next) => {
-  if (req.params.sectoresId) {
-    const subsectores = await Subsector.find({ sector: req.params.sectorId });
+exports.getContadores = asyncHandler(async (req, res, next) => {
+  if (req.params.subsectoresId) {
+    const contadores = await Contador.find({
+      subsector: req.params.subsectorId,
+    });
 
     return res.status(200).json({
       success: true,
-      count: subsectores.length,
-      data: subsectores,
-      msg: `Subsectores enviados del sector id ${req.params.sectoresId}`,
+      count: contadores.length,
+      data: contadores,
+      msg: `Contadores enviados`,
     });
   } else {
     res.status(200).json({
@@ -25,7 +27,7 @@ exports.getSubsectores = asyncHandler(async (req, res, next) => {
   }
 });
 
-// @desc:    Obtener un subsector
+// @desc:    Obtener un subsecto
 // @route     GET /api/v1/subsectores/:id
 // @access:   Public
 exports.getSubsector = asyncHandler(async (req, res, next) => {
@@ -62,7 +64,7 @@ exports.crearSubsector = asyncHandler(async (req, res, next) => {
   if (!sector) {
     return next(
       new ErrorResponse(
-        `No se encontró sector con el id ${req.params.sectorId}`,
+        `No se encontró sector con el id ${req.params.bootcampId}`,
         404
       )
     );

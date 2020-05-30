@@ -1,20 +1,13 @@
 const express = require('express');
 
 const {
-  getSubsector,
-  getSubsectores,
-  editarSubsector,
-  crearSubsector,
-  eliminarSubsector,
-} = require('../controllers/subsector');
-
-// Include other resource routers
-const contadorRouter = require('./contador');
-
-const router = express.Router();
-
-// Re-route into other resource routers
-router.use('/:subsectorId/contadores', contadorRouter);
+  getContadores,
+  getContador,
+  crearContador,
+  editarContador,
+  eliminarContador,
+} = require('../controllers/contador');
+const router = express.Router({ mergeParams: true });
 
 const Subsector = require('../models/Subsector');
 

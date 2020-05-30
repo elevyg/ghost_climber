@@ -62,7 +62,7 @@ exports.crearSubsector = asyncHandler(async (req, res, next) => {
   if (!sector) {
     return next(
       new ErrorResponse(
-        `No se encontró sector con el id ${req.params.sectorId}`,
+        `No se encontró sector con el id ${req.params.bootcampId}`,
         404
       )
     );

@@ -9,12 +9,12 @@ const {
 } = require('../controllers/subsector');
 
 // Include other resource routers
-const contadorRouter = require('./contador');
+const subsectorRouter = require('./subsector');
 
 const router = express.Router();
 
 // Re-route into other resource routers
-router.use('/:subsectorId/contadores', contadorRouter);
+router.use('/:sectorId/subsectores', subsectorRouter);
 
 const Subsector = require('../models/Subsector');
 
