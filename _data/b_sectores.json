@@ -1,0 +1,41 @@
+[{
+  "_id": {
+    "$oid": "5ed1913d9e8c6b0bf56c9bc9"
+  },
+  "enCuarentena": false,
+  "nombre": "Los Manyos",
+  "comuna": "San José de Maipo",
+  "region": "Metropolitana",
+  "pais": "Chile",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ed1d0434bf5360e87261301"
+  },
+  "enCuarentena": false,
+  "nombre": "Las Palestras",
+  "comuna": "San José de Maipo",
+  "region": "Metropolitana",
+  "pais": "Chile",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ed1d04d4bf5360e87261302"
+  },
+  "enCuarentena": false,
+  "nombre": "Chacabuco",
+  "comuna": "Colina",
+  "region": "Metropolitana",
+  "pais": "Chile",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ed1d0554bf5360e87261303"
+  },
+  "enCuarentena": false,
+  "nombre": "Las Chilcas",
+  "comuna": "Llay llay",
+  "region": "Valparaiso",
+  "pais": "Chile",
+  "__v": 0
+}]
