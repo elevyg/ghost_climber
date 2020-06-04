@@ -5,6 +5,7 @@ import {
   LOADING_CONTADORES,
   ERROR_CONTADORES,
   GET_CONTADORES_SECTOR,
+  THIS_CONTADOR,
   UPDATE_CONTADORES,
 } from '../types';
 
@@ -39,6 +40,11 @@ export default (state, action) => {
       return {
         ...state,
         contadores: [...state.contadores, action.payload],
+      };
+    case THIS_CONTADOR:
+      return {
+        ...state,
+        thisContador: action.payload,
       };
     case ERROR_CONTADORES:
       return {

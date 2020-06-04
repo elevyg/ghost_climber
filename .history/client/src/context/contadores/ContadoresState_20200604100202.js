@@ -11,12 +11,13 @@ import {
   LOADING_CONTADORES,
   ERROR_CONTADORES,
   GET_CONTADORES_SECTOR,
-  UPDATE_CONTADORES,
+  THIS_CONTADOR,
 } from '../types';
 
 const ContadoresState = (props) => {
   const initialState = {
     contadores: null,
+    thisContador: null,
     contadorSector: null,
     loading: false,
     error: null,
@@ -95,7 +96,7 @@ const ContadoresState = (props) => {
           contador,
           config
         );
-        dispatch({ type: UPDATE_CONTADORES, payload: res.data.data });
+        dispatch({ type: ADD_CONTADORES, payload: res.data.data });
 
         // dispatch({ type: ADD_CONTADORES, payload: res.data.data });
       } catch (err) {
@@ -132,6 +133,7 @@ const ContadoresState = (props) => {
     <ContadoresContext.Provider
       value={{
         contadores: state.contadores,
+        thisContador: state.thisContador,
         contadorSector: state.contadorSector,
         loading: state.loading,
         error: state.error,

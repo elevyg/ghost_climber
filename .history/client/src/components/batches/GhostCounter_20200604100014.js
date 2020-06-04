@@ -6,7 +6,7 @@ const GhostCounter = ({ sb }) => {
   const [contador, setContador] = useState(0);
   // Contadores states
   const contadoresContext = useContext(ContadoresContext);
-  const { addContador, setThisContador } = contadoresContext;
+  const { addContador, setThisContador, thisContador } = contadoresContext;
 
   // add 1 to the couter
   const countOne = () => {
@@ -38,7 +38,7 @@ const GhostCounter = ({ sb }) => {
       <button
         className={` inline-block flex justify-center items-center rounded w-12 px-3 focus:outline-none ' 
           ${
-            contador.contador === 0 && counter === 0
+            contador.contador === 0
               ? 'bg-blue-200 text-gray-500'
               : 'bg-blue-500 text-white'
           }

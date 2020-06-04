@@ -5,7 +5,7 @@ import {
   LOADING_CONTADORES,
   ERROR_CONTADORES,
   GET_CONTADORES_SECTOR,
-  UPDATE_CONTADORES,
+  THIS_CONTADOR,
 } from '../types';
 
 export default (state, action) => {
@@ -27,7 +27,7 @@ export default (state, action) => {
         contadorSector: action.payload,
         loading: false,
       };
-    case UPDATE_CONTADORES:
+    case ADD_CONTADORES:
       return {
         ...state,
         contadores: state.contadores.map((contador) =>
@@ -35,10 +35,10 @@ export default (state, action) => {
         ),
         loading: false,
       };
-    case ADD_CONTADORES:
+    case THIS_CONTADOR:
       return {
         ...state,
-        contadores: [...state.contadores, action.payload],
+        thisContador: action.payload,
       };
     case ERROR_CONTADORES:
       return {

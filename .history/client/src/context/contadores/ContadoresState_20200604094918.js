@@ -11,12 +11,13 @@ import {
   LOADING_CONTADORES,
   ERROR_CONTADORES,
   GET_CONTADORES_SECTOR,
-  UPDATE_CONTADORES,
+  THIS_CONTADOR,
 } from '../types';
 
 const ContadoresState = (props) => {
   const initialState = {
     contadores: null,
+    thisContador: null,
     contadorSector: null,
     loading: false,
     error: null,
@@ -76,31 +77,26 @@ const ContadoresState = (props) => {
         'Content-Type': 'application/json',
       },
     };
-
-    if (!contadorId) {
-      try {
-        const res = await axios.post(
-          `/api/v1/subsectores/${contador.subsector._id}/contadores/`,
+    try {
+      let res;
+      if (!contadorId) {
+        res = await axios.post(
+          `/api/v1/${contador.subsector._id}/contadores/`,
           contador,
           config
         );
         dispatch({ type: ADD_CONTADORES, payload: res.data.data });
-      } catch (err) {
-        dispatch({ type: ERROR_CONTADORES, payload: err.response.msg });
-      }
-    } else {
-      try {
-        const res = await axios.put(
+      } else {
+        res = await axios.put(
           `/api/v1/contadores/${contadorId}`,
           contador,
           config
         );
-        dispatch({ type: UPDATE_CONTADORES, payload: res.data.data });
-
-        // dispatch({ type: ADD_CONTADORES, payload: res.data.data });
-      } catch (err) {
-        dispatch({ type: ERROR_CONTADORES, payload: err.response.msg });
+        dispatch({ type: ADD_CONTADORES, payload: res.data.data });
       }
+      dispatch({ type: ADD_CONTADORES, payload: res.data.data });
+    } catch (err) {
+      dispatch({ type: ERROR_CONTADORES, payload: err.response.msg });
     }
   };
 
@@ -132,6 +128,7 @@ const ContadoresState = (props) => {
     <ContadoresContext.Provider
       value={{
         contadores: state.contadores,
+        thisContador: state.thisContador,
         contadorSector: state.contadorSector,
         loading: state.loading,
         error: state.error,

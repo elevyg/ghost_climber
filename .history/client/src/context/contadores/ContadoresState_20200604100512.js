@@ -17,6 +17,7 @@ import {
 const ContadoresState = (props) => {
   const initialState = {
     contadores: null,
+    thisContador: null,
     contadorSector: null,
     loading: false,
     error: null,
@@ -132,6 +133,7 @@ const ContadoresState = (props) => {
     <ContadoresContext.Provider
       value={{
         contadores: state.contadores,
+        thisContador: state.thisContador,
         contadorSector: state.contadorSector,
         loading: state.loading,
         error: state.error,

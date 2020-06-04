@@ -6,7 +6,7 @@ const GhostCounter = ({ sb }) => {
   const [contador, setContador] = useState(0);
   // Contadores states
   const contadoresContext = useContext(ContadoresContext);
-  const { addContador, setThisContador } = contadoresContext;
+  const { addContador, setThisContador, thisContador } = contadoresContext;
 
   // add 1 to the couter
   const countOne = () => {
