@@ -25,6 +25,3 @@ yarn-error.log*
 # Config
 config/config.env
 config.zip
-
-#vscode
-.vscode

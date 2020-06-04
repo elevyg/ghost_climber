@@ -25,18 +25,7 @@ const GhostCounter = ({ sb }) => {
     }
   };
 
-  const resetCount = () => {
-    setCounter(0);
-    const contadorActualizado = {
-      subsector: {
-        _id: sb._id,
-      },
-      contador: -counter,
-      fecha: Date.now(),
-    };
-
-    addContador(contadorActualizado, contador._id);
-  };
+  const resetCount = () => setCounter(0);
 
   useEffect(() => {
     if (sb) {

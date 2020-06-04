@@ -24,7 +24,7 @@ exports.getContadores = asyncHandler(async (req, res, next) => {
       msg: `Contadores enviados`,
     });
   }
-  // Contadores acumulados de un sector
+  // Contadores de
   else if (req.params.sectorId) {
     const sector = await Sector.findById(req.params.sectorId);
 

@@ -14389,6 +14389,10 @@ button:focus {
   outline-color: transparent;
 }
 
+i {
+  text-rendering: optimizeLegibility;
+}
+
 @media (min-width: 400px) {
   .sm\:space-y-0 > :not(template) ~ :not(template) {
     --space-y-reverse: 0;

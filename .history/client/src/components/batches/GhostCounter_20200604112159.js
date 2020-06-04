@@ -25,18 +25,7 @@ const GhostCounter = ({ sb }) => {
     }
   };
 
-  const resetCount = () => {
-    setCounter(0);
-    const contadorActualizado = {
-      subsector: {
-        _id: sb._id,
-      },
-      contador: -counter,
-      fecha: Date.now(),
-    };
-
-    addContador(contadorActualizado, contador._id);
-  };
+  const resetCount = () => setCounter(0);
 
   useEffect(() => {
     if (sb) {
@@ -57,7 +46,7 @@ const GhostCounter = ({ sb }) => {
             `}
         onClick={countOne}
       >
-        {contador && <h5 className=''>{contador.contador}</h5>}
+        {contador && <h5 className=''>{contador.contador + counter}</h5>}
         <i className='fas fa-ghost ml-1'></i>
       </button>
       {counter > 0 ? (
