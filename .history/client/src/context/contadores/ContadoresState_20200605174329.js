@@ -113,7 +113,7 @@ const ContadoresState = (props) => {
     }
   };
 
-  const addContadorSector = (sectorId, fecha) => {
+  const addContadorSector = (sectorId) => {
     const contadorExist = state.contadorSector.filter(
       (cS) => cS._id === sectorId && sameDay(cS.fecha, state.thisFecha)
     );
@@ -121,7 +121,7 @@ const ContadoresState = (props) => {
     if (contadorExist.length === 0) {
       const contadorSector = {
         _id: { sector: sectorId },
-        fecha,
+        fecha: state.thisFecha,
         contador: 0,
       };
       dispatch({ type: ADD_CONTADOR_SECTOR, payload: contadorSector });

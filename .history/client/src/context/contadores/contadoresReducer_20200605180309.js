@@ -39,6 +39,7 @@ export default (state, action) => {
       };
 
     case UPDATE_CONTADORES:
+      console.log('Update ' + action.payload);
       return {
         ...state,
         contadores: state.contadores.map((contador) =>
@@ -53,6 +54,7 @@ export default (state, action) => {
         loading: false,
       };
     case ADD_CONTADORES:
+      console.log(action.payload);
       return {
         ...state,
         contadores: [...state.contadores, action.payload],

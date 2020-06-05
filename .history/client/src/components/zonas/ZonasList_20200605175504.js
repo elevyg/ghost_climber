@@ -14,7 +14,6 @@ const ZonasList = () => {
     getContadores,
     getContadorSector,
     filtrarContadores,
-    clearFilter,
     contadores,
     contadorSector,
     thisFecha,
@@ -30,7 +29,6 @@ const ZonasList = () => {
   }, []);
 
   useEffect(() => {
-    clearFilter();
     if (contadores && contadorSector) {
       filtrarContadores(thisFecha);
     }

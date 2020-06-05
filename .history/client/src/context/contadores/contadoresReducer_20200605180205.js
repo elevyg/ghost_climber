@@ -39,6 +39,7 @@ export default (state, action) => {
       };
 
     case UPDATE_CONTADORES:
+      console.log('Update ' + action.payload);
       return {
         ...state,
         contadores: state.contadores.map((contador) =>
@@ -46,19 +47,20 @@ export default (state, action) => {
         ),
         contadorSector: state.contadorSector.map((cS) =>
           cS._id.sector === action.payload.sectorId &&
-          sameDay(cS.fecha, action.payload.fecha)
+          cS.fecha === action.payload.fecha
             ? { ...cS, contador: cS.contador + action.payload.deltaContador }
             : cS
         ),
         loading: false,
       };
     case ADD_CONTADORES:
+      console.log('Add ' + action.payload);
       return {
         ...state,
         contadores: [...state.contadores, action.payload],
         contadorSector: state.contadorSector.map((cS) =>
           cS._id.sector === action.payload.sectorId &&
-          sameDay(cS.fecha, action.payload.fecha)
+          cS.fecha === action.payload.fecha
             ? { ...cS, contador: cS.contador + action.payload.deltaContador }
             : cS
         ),

@@ -34,9 +34,8 @@ const GhostCounter = ({ sb }) => {
         contador: 1,
         fecha: thisFecha,
       };
-      if (contador.dbStatus) {
-        addContadorSector(sb.sector, contadorActualizado.fecha);
-      }
+
+      addContadorSector(sb.sector, contadorActualizado.fecha);
       addContador(contadorActualizado, contador._id, sb.sector);
     }
   };

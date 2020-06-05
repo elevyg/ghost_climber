@@ -45,8 +45,7 @@ export default (state, action) => {
           contador._id === action.payload._id ? action.payload : contador
         ),
         contadorSector: state.contadorSector.map((cS) =>
-          cS._id.sector === action.payload.sectorId &&
-          sameDay(cS.fecha, action.payload.fecha)
+          cS._id.sector === action.payload.sectorId
             ? { ...cS, contador: cS.contador + action.payload.deltaContador }
             : cS
         ),
@@ -57,8 +56,7 @@ export default (state, action) => {
         ...state,
         contadores: [...state.contadores, action.payload],
         contadorSector: state.contadorSector.map((cS) =>
-          cS._id.sector === action.payload.sectorId &&
-          sameDay(cS.fecha, action.payload.fecha)
+          cS._id.sector === action.payload.sectorId
             ? { ...cS, contador: cS.contador + action.payload.deltaContador }
             : cS
         ),
@@ -78,12 +76,6 @@ export default (state, action) => {
           sameDay(cont.fecha, action.payload)
         ),
         loading: false,
-      };
-    case CLEAR_FILTER:
-      return {
-        ...state,
-        contadoresDay: null,
-        contadorSectorDay: null,
       };
     case ERROR_CONTADORES:
       return {

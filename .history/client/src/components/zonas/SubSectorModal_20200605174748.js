@@ -1,8 +1,19 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext, useEffect } from 'react';
 import SubSectorCard from './SubSectorCard';
+import ContadoresContext from '../../context/contadores/contadoresContext';
+
 import NoBorderBtn from '../custom-buttons/NoBorderBtn';
 
 const SubSectorModal = ({ setShowModal, subsectores, sector }) => {
+  const contadoresContext = useContext(ContadoresContext);
+  const { filtrarContadores, thisFecha } = contadoresContext;
+
+  useEffect(() => {
+    filtrarContadores(thisFecha);
+
+    // eslint-disable-next-line
+  });
+
   return (
     <Fragment>
       <div className='justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none'>
