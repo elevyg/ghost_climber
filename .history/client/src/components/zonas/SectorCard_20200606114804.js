@@ -3,7 +3,6 @@ import SubSectorModal from '../zonas/SubSectorModal';
 import GhostTotal from '../batches/GhostTotal';
 import ContadoresContext from '../../context/contadores/contadoresContext';
 import Spinner from '../layout/Spinner';
-import sameDay from '../../utils/sameDay';
 
 const SectorCard = ({ sector }) => {
   const { nombre, subsectores } = sector;
@@ -11,24 +10,18 @@ const SectorCard = ({ sector }) => {
 
   // Contadores states
   const contadoresContext = useContext(ContadoresContext);
-  const { contadorSectorDay, loading, thisFecha } = contadoresContext;
+  const { contadorSectorDay, loading } = contadoresContext;
 
-  // const [contador, setContador] = useState(0);
-
-  const setContador = (contadorSectorDay, thisFecha, sectorId) => {
-    const cont = contadorSectorDay.filter(
-      (cS) => cS._id.sector === sectorId && sameDay(cS.fecha, thisFecha)
-    );
-    if (cont.length > 0) {
-      return cont[0].contador;
-    } else {
-      return 0;
-    }
-  };
+  const [contador, setContador] = useState(0);
 
   let contador;
   if (contadorSectorDay) {
-    contador = setContador(contadorSectorDay, thisFecha, sector._id);
+    const cont = contadorSectorDay.filter((cS) => cS._id.sector === sector._id);
+    if (cont.length > 0) {
+      contador = cont[0].contador;
+    } else {
+      contador = 0;
+    }
   }
 
   return (

@@ -25,7 +25,6 @@ const SectorCard = ({ sector }) => {
       return 0;
     }
   };
-
   let contador;
   if (contadorSectorDay) {
     contador = setContador(contadorSectorDay, thisFecha, sector._id);

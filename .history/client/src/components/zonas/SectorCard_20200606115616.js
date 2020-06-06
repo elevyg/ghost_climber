@@ -15,6 +15,8 @@ const SectorCard = ({ sector }) => {
 
   // const [contador, setContador] = useState(0);
 
+  let contador = 0;
+
   const setContador = (contadorSectorDay, thisFecha, sectorId) => {
     const cont = contadorSectorDay.filter(
       (cS) => cS._id.sector === sectorId && sameDay(cS.fecha, thisFecha)
@@ -26,9 +28,7 @@ const SectorCard = ({ sector }) => {
     }
   };
 
-  let contador;
   if (contadorSectorDay) {
-    contador = setContador(contadorSectorDay, thisFecha, sector._id);
   }
 
   return (
