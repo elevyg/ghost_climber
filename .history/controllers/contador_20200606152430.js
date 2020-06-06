@@ -165,7 +165,7 @@ exports.crearContador = asyncHandler(async (req, res, next) => {
   console.log(sb_date);
   if (sb_date.length > 0) {
     const contador = await Contador.findByIdAndUpdate(
-      sb_date[0]._id,
+      sb_date._id,
       {
         $inc: { contador: req.body.contador },
       },
