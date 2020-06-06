@@ -78,6 +78,9 @@ const ContadoresState = (props) => {
   // Obtener contadores por sector
   const getContadorSector = async (zonas) => {
     try {
+      loadingContadores();
+      console.log('Hola');
+
       const sectores = zonas.map((z) => z.sector);
 
       const sectoresId = [];

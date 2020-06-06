@@ -11,7 +11,7 @@ const SectorCard = ({ sector }) => {
 
   // Contadores states
   const contadoresContext = useContext(ContadoresContext);
-  const { contadorSectorDay, thisFecha } = contadoresContext;
+  const { contadorSectorDay, loading, thisFecha } = contadoresContext;
 
   // const [contador, setContador] = useState(0);
 

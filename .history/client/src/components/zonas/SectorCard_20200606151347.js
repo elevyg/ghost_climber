@@ -11,7 +11,7 @@ const SectorCard = ({ sector }) => {
 
   // Contadores states
   const contadoresContext = useContext(ContadoresContext);
-  const { contadorSectorDay, thisFecha } = contadoresContext;
+  const { contadorSectorDay, loading, thisFecha } = contadoresContext;
 
   // const [contador, setContador] = useState(0);
 
@@ -39,11 +39,7 @@ const SectorCard = ({ sector }) => {
       >
         <div className='inline-block p-3  text-2xl'>{nombre}</div>
         <div className='flex mr-3'>
-          {!contadorSectorDay ? (
-            <Spinner />
-          ) : (
-            <GhostTotal contador={contador} />
-          )}
+          {!contador ? <Spinner /> : <GhostTotal contador={contador} />}
         </div>
       </button>
       {showModal ? (

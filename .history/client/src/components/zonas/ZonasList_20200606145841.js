@@ -23,13 +23,10 @@ const ZonasList = () => {
   useEffect(() => {
     getZonas();
     getContadores();
+    getContadorSector(zonas);
 
     // eslint-disable-next-line
   }, []);
-  useEffect(() => {
-    getContadorSector(zonas);
-    // eslint-disable-next-line
-  }, [zonas]);
 
   useEffect(() => {
     clearFilter();

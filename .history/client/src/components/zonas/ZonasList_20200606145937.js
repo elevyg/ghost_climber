@@ -28,6 +28,7 @@ const ZonasList = () => {
   }, []);
   useEffect(() => {
     getContadorSector(zonas);
+
     // eslint-disable-next-line
   }, [zonas]);
 

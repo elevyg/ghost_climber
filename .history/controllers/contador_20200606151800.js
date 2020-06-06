@@ -180,15 +180,15 @@ exports.crearContador = asyncHandler(async (req, res, next) => {
       data: contador,
       msg: `Contador con Id ${req.params.id} actualizado`,
     });
-  } else {
-    const contador = await Contador.create(req.body);
-
-    res.status(200).json({
-      success: true,
-      data: contador,
-      msg: 'Contador añadido',
-    });
   }
+
+  const contador = await Contador.create(req.body);
+
+  res.status(200).json({
+    success: true,
+    data: contador,
+    msg: 'Contador añadido',
+  });
 });
 
 // @desc:     Editar contador

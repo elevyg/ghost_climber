@@ -23,19 +23,17 @@ const ZonasList = () => {
   useEffect(() => {
     getZonas();
     getContadores();
+    getContadorSector();
 
     // eslint-disable-next-line
   }, []);
-  useEffect(() => {
-    getContadorSector(zonas);
-    // eslint-disable-next-line
-  }, [zonas]);
 
   useEffect(() => {
     clearFilter();
     if (contadores && contadorSector) {
       filtrarContadores(thisFecha);
     }
+
     // eslint-disable-next-line
   }, [contadores, contadorSector, thisFecha]);
 

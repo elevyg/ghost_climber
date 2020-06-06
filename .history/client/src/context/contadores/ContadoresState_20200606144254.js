@@ -76,10 +76,12 @@ const ContadoresState = (props) => {
   };
 
   // Obtener contadores por sector
-  const getContadorSector = async (zonas) => {
+  const getContadorSector = async () => {
     try {
-      const sectores = zonas.map((z) => z.sector);
+      loadingContadores();
+      console.log('Hola');
 
+      const sectores = state.zonas.map((z) => z.sector);
       const sectoresId = [];
 
       for (let i = 0; i < sectores.length; i++) {
@@ -115,7 +117,6 @@ const ContadoresState = (props) => {
 
         res.data.data.sectorId = sectorId;
         res.data.data.deltaContador = contador.contador;
-
         dispatch({ type: ADD_CONTADORES, payload: res.data.data });
       } catch (err) {
         dispatch({ type: ERROR_CONTADORES, payload: err.response.msg });
@@ -129,7 +130,6 @@ const ContadoresState = (props) => {
         );
         res.data.data.sectorId = sectorId;
         res.data.data.deltaContador = contador.contador;
-
         dispatch({ type: UPDATE_CONTADORES, payload: res.data.data });
       } catch (err) {
         dispatch({ type: ERROR_CONTADORES, payload: err.response.msg });

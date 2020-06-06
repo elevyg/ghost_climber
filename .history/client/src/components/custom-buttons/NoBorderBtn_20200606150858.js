@@ -12,7 +12,7 @@ const NoBorderBtn = ({ titulo, funcion }) => {
         style={{ transition: 'all .15s ease' }}
         onClick={() => {
           funcion(false);
-          getContadorSector(zonas);
+          getContadorSector();
         }}
       >
         {titulo}

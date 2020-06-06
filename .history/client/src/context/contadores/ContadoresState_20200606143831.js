@@ -4,12 +4,8 @@ import axios from 'axios';
 import ContadoresContext from './contadoresContext';
 import contadoresReducer from './contadoresReducer';
 
-import groupBy from 'lodash/groupBy';
-import renameKeys from '../../utils/renameKeys';
-
 import {
   GET_CONTADORES,
-  GET_ZONAS,
   ADD_CONTADORES,
   ADD_CONTADOR_SECTOR,
   LOADING_CONTADORES,
@@ -39,7 +35,7 @@ const ContadoresState = (props) => {
   // Get Zonas
   const getZonas = async () => {
     try {
-      loadingContadores();
+      loadingZonas();
       const res = await axios.get('/api/v1/sectores');
 
       let zonas = res.data.data;
@@ -76,10 +72,11 @@ const ContadoresState = (props) => {
   };
 
   // Obtener contadores por sector
-  const getContadorSector = async (zonas) => {
+  const getContadorSector = async () => {
     try {
-      const sectores = zonas.map((z) => z.sector);
+      loadingContadores();
 
+      const sectores = await state.zonas.map((z) => z.sector);
       const sectoresId = [];
 
       for (let i = 0; i < sectores.length; i++) {
@@ -115,7 +112,6 @@ const ContadoresState = (props) => {
 
         res.data.data.sectorId = sectorId;
         res.data.data.deltaContador = contador.contador;
-
         dispatch({ type: ADD_CONTADORES, payload: res.data.data });
       } catch (err) {
         dispatch({ type: ERROR_CONTADORES, payload: err.response.msg });
@@ -129,7 +125,6 @@ const ContadoresState = (props) => {
         );
         res.data.data.sectorId = sectorId;
         res.data.data.deltaContador = contador.contador;
-
         dispatch({ type: UPDATE_CONTADORES, payload: res.data.data });
       } catch (err) {
         dispatch({ type: ERROR_CONTADORES, payload: err.response.msg });

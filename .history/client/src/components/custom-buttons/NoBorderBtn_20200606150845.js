@@ -3,7 +3,7 @@ import ContadoresContext from '../../context/contadores/contadoresContext';
 
 const NoBorderBtn = ({ titulo, funcion }) => {
   const contadoresContext = useContext(ContadoresContext);
-  const { getContadorSector, zonas } = contadoresContext;
+  const { getContadorSector } = contadoresContext;
   return (
     <div>
       <button
@@ -12,7 +12,6 @@ const NoBorderBtn = ({ titulo, funcion }) => {
         style={{ transition: 'all .15s ease' }}
         onClick={() => {
           funcion(false);
-          getContadorSector(zonas);
         }}
       >
         {titulo}

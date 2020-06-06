@@ -164,7 +164,7 @@ exports.crearContador = asyncHandler(async (req, res, next) => {
   const sb_date = sb_contador.filter((sb) => sameDay(sb.fecha, req.body.fecha));
 
   if (sb_date.length > 0) {
-    const contador = await Contador.findByIdAndUpdate(
+    contador = await Contador.findByIdAndUpdate(
       sb_date._id,
       {
         $inc: { contador: req.body.contador },
@@ -180,15 +180,15 @@ exports.crearContador = asyncHandler(async (req, res, next) => {
       data: contador,
       msg: `Contador con Id ${req.params.id} actualizado`,
     });
-  } else {
-    const contador = await Contador.create(req.body);
-
-    res.status(200).json({
-      success: true,
-      data: contador,
-      msg: 'Contador añadido',
-    });
   }
+
+  const contador = await Contador.create(req.body);
+
+  res.status(200).json({
+    success: true,
+    data: contador,
+    msg: 'Contador añadido',
+  });
 });
 
 // @desc:     Editar contador

@@ -1,4 +1,6 @@
 import React, { useContext, useEffect } from 'react';
+// import { useAsync } from 'react-async-hook';
+
 import Zona from './Zona';
 import GhostLoading from '../layout/GhostLoading';
 import ContadoresContext from '../../context/contadores/contadoresContext';
@@ -26,18 +28,20 @@ const ZonasList = () => {
 
     // eslint-disable-next-line
   }, []);
-  useEffect(() => {
-    getContadorSector(zonas);
-    // eslint-disable-next-line
-  }, [zonas]);
 
   useEffect(() => {
     clearFilter();
     if (contadores && contadorSector) {
       filtrarContadores(thisFecha);
     }
+
     // eslint-disable-next-line
   }, [contadores, contadorSector, thisFecha]);
+
+  useEffect(() => {
+    getContadorSector(zonas);
+    // eslint-disable-next-line
+  }, [zonas]);
 
   if (zonas !== null && zonas.length === 0 && !loading) {
     return <h4> Error </h4>;
