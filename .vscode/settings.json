@@ -21,8 +21,7 @@
     "client/postcss.config.js": false,
     "client/public": false,
     ".vscode": false,
-    ".history": false,
-    "client/build": false
+    ".history": false
   },
   "workspace.isHidden": false
 }
