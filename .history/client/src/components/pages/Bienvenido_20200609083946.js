@@ -10,7 +10,7 @@ export const Bienvenido = () => {
             {' '}
             Unidos para estar divididos
           </h3>
-
+          <h5 className='text-gray-700 text-sm text-hairline'>Versión Beta</h5>
           <button
             className='text-sm bg-transparent rounded bg-black hover:bg-gray-600 active:bg-blue-500 text-white px-3 py-2  focus:outline-none focus:font-bold mb-3 mt-10'
             onClick={() => setLeerMas(!leerMas)}
@@ -67,8 +67,7 @@ export const Bienvenido = () => {
 
       {/* Github link */}
       <div className='text-sm text-gray-700 mt-10'>
-        Este es una versión <span className='font-bold'>beta</span> de un
-        proyecto código abierto, aporta en{' '}
+        Este es un proyecto código abierto, aporta en{' '}
         <a
           href='https://github.com/elevyg/ghost_climber'
           target='_blank'

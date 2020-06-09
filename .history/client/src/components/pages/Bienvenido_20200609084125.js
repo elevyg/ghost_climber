@@ -67,8 +67,8 @@ export const Bienvenido = () => {
 
       {/* Github link */}
       <div className='text-sm text-gray-700 mt-10'>
-        Este es una versión <span className='font-bold'>beta</span> de un
-        proyecto código abierto, aporta en{' '}
+        Este es una versión <span className='text-bold'>beta</span> proyecto
+        código abierto, aporta en{' '}
         <a
           href='https://github.com/elevyg/ghost_climber'
           target='_blank'

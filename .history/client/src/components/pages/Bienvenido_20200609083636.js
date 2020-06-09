@@ -6,13 +6,12 @@ export const Bienvenido = () => {
     <div className='flex flex-col justify-between h-full'>
       {leerMas ? (
         <div className='flex h-full flex-col justify-center items-center'>
-          <h3 className='text-3xl  tracking-wide font-bold '>
+          <h3 className='text-3xl mb-10 tracking-wide font-bold '>
             {' '}
             Unidos para estar divididos
           </h3>
-
           <button
-            className='text-sm bg-transparent rounded bg-black hover:bg-gray-600 active:bg-blue-500 text-white px-3 py-2  focus:outline-none focus:font-bold mb-3 mt-10'
+            className='text-sm bg-transparent rounded bg-black hover:bg-gray-600 active:bg-blue-500 text-white px-3 py-2  focus:outline-none focus:font-bold mb-3'
             onClick={() => setLeerMas(!leerMas)}
           >
             <i className='fas fa-info'></i> Leer más
@@ -41,7 +40,7 @@ export const Bienvenido = () => {
             </p>
           </div>
           <button
-            className='block md:inline-block w-3/4 text-sm  self-center opacity-75 bg-transparent rounded bg-black hover:bg-gray-600 active:bg-blue-500 text-white px-3 py-2  focus:outline-none focus:font-bold mb-3'
+            className='block md:inline-block w-3/4 text-sm opacity-75 bg-transparent rounded bg-black hover:bg-gray-600 active:bg-blue-500 text-white px-3 py-2  focus:outline-none focus:font-bold mb-3'
             onClick={() => setLeerMas(!leerMas)}
           >
             Volver
@@ -67,8 +66,7 @@ export const Bienvenido = () => {
 
       {/* Github link */}
       <div className='text-sm text-gray-700 mt-10'>
-        Este es una versión <span className='font-bold'>beta</span> de un
-        proyecto código abierto, aporta en{' '}
+        Este es un proyecto código abierto, aporta en{' '}
         <a
           href='https://github.com/elevyg/ghost_climber'
           target='_blank'
