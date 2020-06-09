@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useContext } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import Navbar from '../layout/Navbar';
 import ZonasList from '../zonas/ZonasList';
 import AuthContext from '../../context/auth/authContext';
@@ -12,7 +12,6 @@ const Home = () => {
     loadUser();
     // eslint-disable-next-line
   }, []);
-
   return (
     <Fragment>
       <Navbar isDateBox={true} />
@@ -26,4 +25,4 @@ const Home = () => {
   );
 };
 
-export default React.memo(Home);
+export default Home;

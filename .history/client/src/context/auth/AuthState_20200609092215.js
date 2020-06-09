@@ -20,21 +20,20 @@ const AuthState = (props) => {
     token: localStorage.getItem('token'),
     user: null,
     isAuthenticated: null,
-    loading: true,
+    loading: false,
     error: null,
   };
 
   const [state, dispatch] = useReducer(authReducer, initialState);
 
   // Loading true
-  const loadingAuth = () => {
+  const loading = () => {
     dispatch({ type: LOADING });
   };
 
   // Load User
 
   const loadUser = async () => {
-    loadingAuth();
     if (localStorage.token) {
       setAuthToken(localStorage.token);
     }
@@ -51,7 +50,6 @@ const AuthState = (props) => {
   // Register User
 
   const register = async (formData) => {
-    loadingAuth();
     const config = {
       headers: {
         'Content-Type': 'application/json',
@@ -78,7 +76,6 @@ const AuthState = (props) => {
   // Login User
 
   const login = async (formData) => {
-    loadingAuth();
     const config = {
       headers: {
         'Content-Type': 'application/json',
@@ -105,7 +102,6 @@ const AuthState = (props) => {
   // Logout
 
   const logout = async () => {
-    loadingAuth();
     try {
       await axios.get('api/v1/auth/logout');
       dispatch({ type: LOGOUT });
@@ -129,7 +125,7 @@ const AuthState = (props) => {
         logout,
         clearErrors,
         loadUser,
-        loadingAuth,
+        loading,
       }}
     >
       {props.children}

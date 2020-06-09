@@ -20,7 +20,7 @@ const AuthState = (props) => {
     token: localStorage.getItem('token'),
     user: null,
     isAuthenticated: null,
-    loading: true,
+    loading: false,
     error: null,
   };
 
@@ -34,7 +34,6 @@ const AuthState = (props) => {
   // Load User
 
   const loadUser = async () => {
-    loadingAuth();
     if (localStorage.token) {
       setAuthToken(localStorage.token);
     }

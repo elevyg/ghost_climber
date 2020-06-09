@@ -12,7 +12,6 @@ const Home = () => {
     loadUser();
     // eslint-disable-next-line
   }, []);
-
   return (
     <Fragment>
       <Navbar isDateBox={true} />
@@ -26,4 +25,4 @@ const Home = () => {
   );
 };
 
-export default React.memo(Home);
+export default Home;

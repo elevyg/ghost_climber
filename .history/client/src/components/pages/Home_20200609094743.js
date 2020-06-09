@@ -11,7 +11,7 @@ const Home = () => {
   useEffect(() => {
     loadUser();
     // eslint-disable-next-line
-  }, []);
+  }, [loadUser]);
 
   return (
     <Fragment>
@@ -26,4 +26,4 @@ const Home = () => {
   );
 };
 
-export default React.memo(Home);
+export default Home;
